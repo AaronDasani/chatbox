@@ -40,7 +40,7 @@
                 
             <div class="col-3">
                 <a class="text-white mr-2" href="{%url 'dashboard:profile' user_id=request.session.user_id%}">
-                    <img class="rounded-circle d-inline-block mr-2" src="..{{user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
+                    <img class="rounded-circle d-inline-block mr-2" src="{{user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
                     <small>{{user.user_name}}</small>
                 </a>
                 <a class="text-white btn btn-dark" href="{%url 'users:logout'%}"> <span>Logout</span>  <i class=" ml-1 mr-2 fas fa-sign-out-alt"></i></a>
@@ -56,7 +56,7 @@
                 <a class="text-white mr-5" href="{%url 'dashboard:profile' user_id=request.session.user_id%}"> 
                     {% if profile %}
                     {% else %}
-                        <img class="rounded-circle d-inline-block mr-2" src=".{{user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
+                        <img class="rounded-circle d-inline-block mr-2" src="{{user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
                         <small>{{user.user_name}}</small>
                     {% endif %}
                     

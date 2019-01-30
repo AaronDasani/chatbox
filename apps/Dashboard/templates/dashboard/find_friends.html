@@ -25,7 +25,7 @@
             {% for index in friend_request %}
                 <div class=" row">
                     <div class="col-8">
-                        <img class="rounded-circle d-inline-block mr-1 mb-2" src="..{{index.profile.url}}" alt="Generic placeholder image" width="60" height="60">
+                        <img class="rounded-circle d-inline-block mr-1 mb-2" src="{{index.profile.url}}" alt="Generic placeholder image" width="60" height="60">
                         <a href="{%url 'dashboard:profile' user_id=index.id%}" class="col-7 text-dark">
                             <h6 class="d-inline">{{index.first_name}} {{index.last_name}}</h6>
                         </a>
@@ -51,7 +51,7 @@
             {% for index in potentialFriends  %}
             <div class="">
                 <div class="col-9 d-inline-block">
-                    <img class="rounded-circle d-inline-block mr-3 mb-2" src="..{{index.profile.url}}" alt="Generic placeholder image" width="60" height="60">
+                    <img class="rounded-circle d-inline-block mr-3 mb-2" src="{{index.profile.url}}" alt="Generic placeholder image" width="60" height="60">
                   
                     <a href="{%url 'dashboard:profile' user_id=index.id%}"><h6 class="d-inline mb-0 text-dark">{{index.first_name}} {{index.last_name}}</h6></a>
                 </div>

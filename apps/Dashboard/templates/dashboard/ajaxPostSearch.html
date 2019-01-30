@@ -14,9 +14,9 @@
         <div class="col-11 postHeader">
             <div class="profilePic">
                 {% if profile_page %}
-                    <img class="rounded-circle" src="..{{post.user.profile.url}}" alt="Generic placeholder image" width="70" height="70">
+                    <img class="rounded-circle" src="{{post.user.profile.url}}" alt="Generic placeholder image" width="70" height="70">
                 {% else %}
-                    <img class="rounded-circle" src=".{{post.user.profile.url}}" alt="Generic placeholder image" width="70" height="70">
+                    <img class="rounded-circle" src="{{post.user.profile.url}}" alt="Generic placeholder image" width="70" height="70">
                 {% endif %}
                 
             </div>
@@ -76,9 +76,9 @@
 
                 <div>
                     {% if profile_page %}
-                        <img class="rounded-circle d-inline-block mr-1" src="..{{comment.user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
+                        <img class="rounded-circle d-inline-block mr-1" src="{{comment.user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
                     {% else %}
-                        <img class="rounded-circle d-inline-block mr-1" src=".{{comment.user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
+                        <img class="rounded-circle d-inline-block mr-1" src="{{comment.user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
                     {% endif %}
                     <div class="d-inline-block ">
                         <p class="mb-0 bg-light p-2 rounded ">
@@ -142,9 +142,9 @@
                     <div class="replyBox ml-5">
                         <div>
                             {% if profile_page %}
-                                <img class="rounded-circle d-inline-block mr-3" src="..{{reply.user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
+                                <img class="rounded-circle d-inline-block mr-3" src="{{reply.user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
                             {% else %}
-                                <img class="rounded-circle d-inline-block mr-3" src=".{{reply.user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
+                                <img class="rounded-circle d-inline-block mr-3" src="{{reply.user.profile.url}}" alt="Generic placeholder image" width="40" height="40">
                             {% endif %}
                             <div class="d-inline-block">
                                 <p class="mb-0 bg-light p-2 rounded ">{{reply.content}}</p>

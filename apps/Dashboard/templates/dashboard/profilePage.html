@@ -70,11 +70,11 @@
                         
                         {% ifequal user.id request.session.user_id %}
                             <a href="#" data-toggle="modal" data-target="#edit">
-                                <img class="mb-2 " src="..{{user.profile.url}}" alt="profile pic">
+                                <img class="mb-2 " src="{{user.profile.url}}" alt="profile pic">
                                 <div class="overlay">Edit</div>
                             </a> 
                         {%else%}
-                            <img class="mb-2 " src="..{{user.profile.url}}" alt="profile pic">
+                            <img class="mb-2 " src="{{user.profile.url}}" alt="profile pic">
                         {% endifequal %}
                         
                     </div>
@@ -108,7 +108,7 @@
 
                     {% for index in friends %}
                         <div class="ml-3 mb-2">
-                            <img class="rounded-circle d-inline-block mr-3" src="..{{index.profile.url}}" alt="Profile picture" width="40" height="40">
+                            <img class="rounded-circle d-inline-block mr-3" src="{{index.profile.url}}" alt="Profile picture" width="40" height="40">
                             <a href="{%url 'dashboard:profile' user_id=index.id%}"><small class="text-dark">{{index.first_name}} {{index.last_name}}</small></a> 
                         </div>
                     
@@ -171,7 +171,7 @@
                             <input type="file" name="image" id="real-file" hidden="hidden"/>
                             <button type="button" class="btn btn-sm btn-info p-2 d-block mt-4" id="custom-button">Choose Image</button>
                             <div class=" mt-2 font-weight-light ml-3 d-block pb-3"> 
-                                <a id="custom-text" href="..{{user.profile.url}}"> {{user.profile.url}}</a> 
+                                <span id="custom-text"></span> 
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
@@ -246,6 +246,7 @@
         realFileBtn.click();
 
     });
+
     realFileBtn.addEventListener("change",function(){
         if (realFileBtn.value) {
             customText.innerHTML=realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
