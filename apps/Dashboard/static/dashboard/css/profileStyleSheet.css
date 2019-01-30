@@ -2,8 +2,9 @@
     background-size: cover;
     background: url("../images/profileBG.jpg");
     background-position: center;
-    background-attachment:fixed;
-    height: 300px !important;
+    /* background-attachment:fixed; */
+    /* height: 300px !important; */
+    background-repeat: no-repeat;
 
     
 }
